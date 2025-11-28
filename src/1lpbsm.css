@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
+  --color-background: hsl(0 0% 0%); /* Black */
+  --color-foreground: hsl(0 0% 100%); /* White */
+  
+  --color-card: hsl(0 0% 3%);
+  --color-card-foreground: hsl(0 0% 100%);
+  
+  --color-popover: hsl(0 0% 3%);
+  --color-popover-foreground: hsl(0 0% 100%);
+  
+  --color-primary: hsl(0 0% 100%);
+  --color-primary-foreground: hsl(0 0% 0%);
+  
+  --color-secondary: hsl(0 0% 10%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+  
+  --color-muted: hsl(0 0% 10%);
+  --color-muted-foreground: hsl(0 0% 60%);
+  
+  --color-accent: hsl(0 0% 15%);
+  --color-accent-foreground: hsl(0 0% 100%);
+  
+  --color-destructive: hsl(0 62.8% 30.6%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  
+  --color-border: hsl(0 0% 20%);
+  --color-input: hsl(0 0% 20%);
+  --color-ring: hsl(0 0% 100%);
+  
+  --font-sans: 'Space Mono', monospace; /* Tech vibe */
+  --font-mono: 'Space Mono', monospace;
+  
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: black;
+    color: white;
+  }
+}
